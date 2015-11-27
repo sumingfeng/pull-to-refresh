@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>我的生活</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<link rel="stylesheet" type="text/css" href="style/pull.css">
+	
+</head>
+
+<body>
+
+	<header class="bar bar-nav">
+		<h1 class='title'>下拉刷新</h1>
+	</header>
+	<!-- content应该拥有"pull-to-refresh-content"类,表示启用下拉刷新 -->
+	<div class="content pull-to-refresh-content" data-ptr-distance="55">
+		<!-- 默认的下拉刷新层 -->
+		<div class="pull-to-refresh-layer">
+			<div class="preloader"></div>
+			<div class="pull-to-refresh-arrow"></div>
+		</div>
+		<!-- 下面是正文 -->
+		<div class="card-container">
+			<div class="card">
+				<div class="card-header">列表标题</div>
+				<div class="card-content">
+					<div class="card-content-inner">
+						描述信息.....喝不完的酒。
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="zepto.min.js"></script>
+	<script src="su-pull.js"></script>
+
+	<script>
+		
+		$('.pull-to-refresh-content').Su_pull({
+			
+			diff:"60" //下拉多长距离滑块进行变换
+			
+		}, function(s, w) {
+			
+			//执行ajax数据操作
+
+			alert("手指放松后，回调执行ajax数据操作");
+
+		})
+		
+	</script>
+</body>
+
+</html>
