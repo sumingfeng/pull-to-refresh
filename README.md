@@ -2,7 +2,7 @@
 
 移动端下拉刷新,基于Zepto,demo截图如下：
 
-![image](https://github.com/sumingfeng/pull-to-refresh/blob/master/images/thumb.jpg)
+![image](https://github.com/sumingfeng/pull-to-refresh/blob/master/thumb.jpg)
 
 使用说明：
 
